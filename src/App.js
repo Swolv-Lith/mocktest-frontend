@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import LeftForm from './LeftForm/LeftForm'
+import RightForm from './RightForm/RightForm'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div class="page-content">
+			<div class="form-v10-content">
+				<form class="form-detail" action="/send-email" method="POST">
+					<LeftForm />
+					<RightForm />
+				</form>
+			</div>
+		</div>
+	)
 }
 
-export default App;
+export default App
