@@ -1,34 +1,12 @@
 import React from 'react'
 import '../App.css'
+import {FormGroup1Left, FormGroup2Left} from '../assets/FormGroup/FormGroups'
 
-const LeftForm = props => {
+export default function LeftForm() {
   return (
     <div class="form-left">
       <h2>Informações do Imóvel Desejado</h2>
-      <div class="form-group">
-        <div class="form-row form-row-1">
-          <select name="pagamento">
-            <option class="option" value="Pagamento">Pagamento</option>
-            <option class="option" value="Á vista">Á vista</option>
-            <option class="option" value="Parcelado">Parcelado</option>
-            <option class="option" value="Financiamento">Financiamento</option>
-          </select>
-          <span class="select-btn">
-            <i class="zmdi zmdi-chevron-down"></i>
-          </span>
-        </div>
-        <div class="form-row form-row-2">
-          <select name="investimento">
-            <option value="Quanto quer investir?">Quanto quer investir?</option>
-            <option value="Menos de R$150.000">Menos de R$150.000</option>
-            <option value="Entre R$150.000 e R$250.000">Entre R$150.000 e R$250.000</option>
-            <option value="Mais de R$250.000">Mais de R$250.000</option>
-          </select>
-          <span class="select-btn">
-            <i class="zmdi zmdi-chevron-down"></i>
-          </span>
-        </div>
-      </div>
+      <FormGroup1Left />
       <div class="form-row">
         <select name="mudanca">
           <option class="option" value="Quanto pretende se mudar?">Quanto pretende se mudar?</option>
@@ -40,30 +18,7 @@ const LeftForm = props => {
           <i class="zmdi zmdi-chevron-down"></i>
         </span>
       </div>
-      <div class="form-group">
-        <div class="form-row form-row-3">
-          <select name="estado_do_imovel">
-            <option class="option" value="Novo ou Usado?">Novo ou Usado?</option>
-            <option class="option" value="Imóvel na planta">Imóvel na planta</option>
-            <option class="option" value="Imóvel Novo">Imóvel Novo</option>
-            <option class="option" value="Imóvel Usado">Imóvel Usado</option>
-          </select>
-          <span class="select-btn">
-            <i class="zmdi zmdi-chevron-down"></i>
-          </span>
-        </div>
-        <div class="form-row form-row-4">
-          <select name="tipo_do_imovel">
-            <option value="Tipo do Imóvel">Tipo do Imóvel</option>
-            <option value="Casa">Casa</option>
-            <option value="Apartamento">Apartamento</option>
-            <option value="Sobrado">Sobrado</option>
-          </select>
-          <span class="select-btn">
-            <i class="zmdi zmdi-chevron-down"></i>
-          </span>
-        </div>
-      </div>
+      <FormGroup2Left />
       <div class="form-row">
         <div class="form-row-3">
           <select name="localizacao">
@@ -80,5 +35,3 @@ const LeftForm = props => {
     </div>
   )
 }
-
-export default LeftForm
